@@ -77,7 +77,7 @@ To test if the application works as expected, either
 
 Httpie:
 ```shell
-http localhost:9091/library-server/books --auth 'bruce.wayne@example.com:wayne'
+http localhost:9091/library-server/books --auth bruce.wayne@example.com:wayne
 ``` 
 
 Curl:

@@ -1,0 +1,289 @@
+{
+  "realm": "photoz",
+  "enabled": true,
+  "userManagedAccessAllowed": "true",
+  "sslRequired": "external",
+  "privateKey": "MIICXAIBAAKBgQCrVrCuTtArbgaZzL1hvh0xtL5mc7o0NqPVnYXkLvgcwiC3BjLGw1tGEGoJaXDuSaRllobm53JBhjx33UNv+5z/UMG4kytBWxheNVKnL6GgqlNabMaFfPLPCF8kAgKnsi79NMo+n6KnSY8YeUmec/p2vjO2NjsSAVcWEQMVhJ31LwIDAQABAoGAfmO8gVhyBxdqlxmIuglbz8bcjQbhXJLR2EoS8ngTXmN1bo2L90M0mUKSdc7qF10LgETBzqL8jYlQIbt+e6TH8fcEpKCjUlyq0Mf/vVbfZSNaVycY13nTzo27iPyWQHK5NLuJzn1xvxxrUeXI6A2WFpGEBLbHjwpx5WQG9A+2scECQQDvdn9NE75HPTVPxBqsEd2z10TKkl9CZxu10Qby3iQQmWLEJ9LNmy3acvKrE3gMiYNWb6xHPKiIqOR1as7L24aTAkEAtyvQOlCvr5kAjVqrEKXalj0Tzewjweuxc0pskvArTI2Oo070h65GpoIKLc9jf+UA69cRtquwP93aZKtW06U8dQJAF2Y44ks/mK5+eyDqik3koCI08qaC8HYq2wVl7G2QkJ6sbAaILtcvD92ToOvyGyeE0flvmDZxMYlvaZnaQ0lcSQJBAKZU6umJi3/xeEbkJqMfeLclD27XGEFoPeNrmdx0q10Azp4NfJAY+Z8KRyQCR2BEG+oNitBOZ+YXF9KCpH3cdmECQHEigJhYg+ykOvr1aiZUMFT72HU0jnmQe2FVekuG+LJUt2Tm7GtMjTFoGpf0JwrVuZN39fOYAlo+nTixgeW7X8Y=",
+  "publicKey": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCrVrCuTtArbgaZzL1hvh0xtL5mc7o0NqPVnYXkLvgcwiC3BjLGw1tGEGoJaXDuSaRllobm53JBhjx33UNv+5z/UMG4kytBWxheNVKnL6GgqlNabMaFfPLPCF8kAgKnsi79NMo+n6KnSY8YeUmec/p2vjO2NjsSAVcWEQMVhJ31LwIDAQAB",
+  "requiredCredentials": [
+    "password"
+  ],
+  "users": [
+    {
+      "username": "alice",
+      "enabled": true,
+      "email": "alice@keycloak.org",
+      "firstName": "Alice",
+      "lastName": "In Chains",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "alice"
+        }
+      ],
+      "realmRoles": [
+        "user", "uma_authorization"
+      ],
+      "clientRoles": {
+        "photoz-service": [
+          "manage-photoz"
+        ],
+        "account": [
+          "manage-account"
+        ]
+      }
+    },
+    {
+      "username": "jdoe",
+      "enabled": true,
+      "email": "jdoe@keycloak.org",
+      "firstName": "John",
+      "lastName": "Doe",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "jdoe"
+        }
+      ],
+      "realmRoles": [
+        "user", "uma_authorization"
+      ],
+      "clientRoles": {
+        "photoz-service": [
+          "manage-photoz"
+        ],
+        "account": [
+          "manage-account"
+        ]
+      }
+    },
+    {
+      "username": "admin",
+      "enabled": true,
+      "email": "admin@admin.com",
+      "firstName": "Admin",
+      "lastName": "Istrator",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "admin"
+        }
+      ],
+      "realmRoles": [
+        "admin", "user", "uma_authorization"
+      ],
+      "clientRoles": {
+        "realm-management": [
+          "realm-admin"
+        ],
+        "photoz-service": [
+          "manage-photoz"
+        ],
+        "account": [
+          "manage-account"
+        ]
+      }
+    },
+    {
+      "username": "peter",
+      "enabled": true,
+      "email": "peter@keycloak.org",
+      "firstName": "Peter",
+      "lastName": "Pan",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "peter"
+        }
+      ],
+      "realmRoles": [
+        "user", "uma_authorization"
+      ],
+      "clientRoles": {
+        "account": [
+          "manage-account"
+        ]
+      }
+    },
+    {
+      "username": "service-account-photoz-service",
+      "enabled": true,
+      "email": "service-account-photoz-service@placeholder.org",
+      "serviceAccountClientId": "photoz-service",
+      "clientRoles": {
+        "photoz-service" : ["uma_protection"]
+      }
+    }
+  ],
+  "roles": {
+    "realm": [
+      {
+        "name": "user",
+        "description": "User privileges"
+      },
+      {
+        "name": "admin",
+        "description": "Administrator privileges"
+      }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "photoz-app",
+      "enabled": true,
+      "adminUrl": "http://localhost:8080/app",
+      "baseUrl": "http://localhost:8080/app",
+      "publicClient": false,
+      "consentRequired" : true,
+      "fullScopeAllowed" : true,
+      "redirectUris": [
+        "http://localhost:8080/app/*",
+        "http://localhost:8080/sso/login/*"
+      ],
+      "webOrigins": ["http://localhost:8080"],
+      "secret": "password"
+    },
+    {
+      "clientId": "photoz-service",
+      "secret": "secret",
+      "enabled": true,
+      "baseUrl": "http://localhost:8081/photoz",
+      "redirectUris": [
+        "http://localhost:8080/app"
+      ],
+      "authorizationServicesEnabled" : true,
+      "authorizationSettings": {
+        "allowRemoteResourceManagement": true,
+        "policyEnforcementMode": "ENFORCING",
+        "resources": [
+          {
+            "name": "Photo Resource",
+            "type": "http://photoz.com/photoz",
+            "ownerManagedAccess": false,
+            "attributes": {},
+            "_id": "df7b5796-069d-4607-b3e1-658443fd7481",
+            "uris": [
+              "/photoz/create"
+            ],
+            "scopes": [
+              {
+                "name": "photo:create"
+              }
+            ]
+          }
+        ],
+        "policies": [
+          {
+            "id": "31f958c1-e64a-4fee-90fb-c32a8f964e80",
+            "name": "Any Admin Policy",
+            "description": "Defines that adminsitrators can do something",
+            "type": "role",
+            "logic": "POSITIVE",
+            "decisionStrategy": "UNANIMOUS",
+            "config": {
+              "roles": "[{\"id\":\"admin\",\"required\":true}]"
+            }
+          },
+          {
+            "id": "ae5e8e31-81a9-4f13-9227-17c639a7ec21",
+            "name": "Only From a Specific Client Address",
+            "description": "Defines that only clients from a specific address can do something",
+            "type": "js",
+            "logic": "POSITIVE",
+            "decisionStrategy": "UNANIMOUS",
+            "config": {
+              "code": "var contextAttributes = $evaluation.getContext().getAttributes();\n\nif (contextAttributes.containsValue('kc.client.network.ip_address', '127.0.0.1')) {\n    $evaluation.grant();\n}"
+            }
+          },
+          {
+            "id": "0963d592-1430-4b0b-ac4e-25b68bf39c60",
+            "name": "Administration Policy",
+            "description": "Defines that only administrators from a specific network address can do something.",
+            "type": "aggregate",
+            "logic": "POSITIVE",
+            "decisionStrategy": "UNANIMOUS",
+            "config": {
+              "applyPolicies": "[\"Any Admin Policy\",\"Only From a Specific Client Address\"]"
+            }
+          },
+          {
+            "id": "7546da6d-c0dd-4f7c-897e-1dafbbf52fb5",
+            "name": "Only Owner Policy",
+            "description": "Defines that only the resource owner is allowed to do something",
+            "type": "js",
+            "logic": "POSITIVE",
+            "decisionStrategy": "UNANIMOUS",
+            "config": {
+              "code": "var permission = $evaluation.getPermission();\nvar identity = $evaluation.getContext().getIdentity();\nvar resource = permission.getResource();\nif (resource) {\nif (resource.getOwner().equals(identity.getId())) {\n$evaluation.grant();\n}}"
+            }
+          },
+          {
+            "id": "7f957056-cfea-4fcd-8f07-936545febcb5",
+            "name": "Only Owner and Administrators Policy",
+            "description": "Defines that only the resource owner and administrators can do something",
+            "type": "aggregate",
+            "logic": "POSITIVE",
+            "decisionStrategy": "AFFIRMATIVE",
+            "config": {
+              "applyPolicies": "[\"Administration Policy\",\"Only Owner Policy\"]"
+            }
+          },
+          {
+            "id": "f27b71d4-6a91-4dc2-b280-1eadf2c23e65",
+            "name": "Any User Policy",
+            "description": "Defines that only users from well known clients are allowed to access",
+            "type": "role",
+            "logic": "POSITIVE",
+            "decisionStrategy": "UNANIMOUS",
+            "config": {
+              "roles": "[{\"id\":\"user\",\"required\":false},{\"id\":\"photoz-service/manage-photoz\",\"required\":true}]"
+            }
+          },
+          {
+            "id": "b33c5e39-d10f-4abe-8fe3-80b4aa860fec",
+            "name": "Photo Resource Permission",
+            "description": "A default permission that defines access for any photo resource",
+            "type": "scope",
+            "logic": "POSITIVE",
+            "decisionStrategy": "UNANIMOUS",
+            "config": {
+              "scopes": "[\"photo:view\",\"photo:view-detail\",\"photo:delete\"]",
+              "applyPolicies": "[\"Only Owner and Administrators Policy\"]"
+            }
+          },
+          {
+            "id": "ec23e0b7-06fa-4346-bcab-aaa4ba2773fa",
+            "name": "Photo create permission",
+            "description": "Permission for creating new photo",
+            "type": "scope",
+            "logic": "POSITIVE",
+            "decisionStrategy": "UNANIMOUS",
+            "config": {
+              "resources": "[\"Photo Resource\"]",
+              "scopes": "[\"photo:create\"]",
+              "applyPolicies": "[\"Any User Policy\"]"
+            }
+          }
+        ],
+        "scopes": [
+          {
+            "id": "aa127425-6b7d-4d45-ad67-3b0bbd0fa992",
+            "name": "photo:delete"
+          },
+          {
+            "id": "b1e68b16-386a-4fd9-9f9b-10251b1e75a3",
+            "name": "photo:view"
+          },
+          {
+            "id": "3156ff9e-7391-4e1d-8a07-641a08ae7d77",
+            "name": "photo:create"
+          },
+          {
+            "id": "75613b0a-07eb-4cf3-aa88-5fc1fd2c4294",
+            "name": "photo:view-detail"
+          }
+        ]
+      }
+    }
+  ]
+}

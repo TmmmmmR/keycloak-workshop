@@ -1,0 +1,11 @@
+org\keycloak\example\photoz\PhotozServiceApp.class
+org\keycloak\example\photoz\service\OwnerRepresentation.class
+org\keycloak\example\photoz\util\ServiceTokenUtil.class
+org\keycloak\example\photoz\service\PhotozService.class
+org\keycloak\example\photoz\service\PhotozAuthzService.class
+org\keycloak\example\photoz\service\PhotoRepresentation.class
+org\keycloak\example\photoz\web\PhotozServiceController.class
+org\keycloak\example\photoz\PhotozServiceApp$1.class
+org\keycloak\example\photoz\service\InMemoryPhotozDB$Photo.class
+org\keycloak\example\photoz\util\ImgUtil.class
+org\keycloak\example\photoz\service\InMemoryPhotozDB.class

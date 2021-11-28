@@ -1,0 +1,10 @@
+X:\_TOOLS\keycloak-15.0.2\labs\photoz-uma\photoz-app\src\main\java\org\keycloak\example\photoz\app\config\AuthzClientRequestFactory.java
+X:\_TOOLS\keycloak-15.0.2\labs\photoz-uma\photoz-app\src\main\java\org\keycloak\example\photoz\app\service\PhotozClientService.java
+X:\_TOOLS\keycloak-15.0.2\labs\photoz-uma\photoz-app\src\main\java\org\keycloak\example\photoz\app\PhotozApp.java
+X:\_TOOLS\keycloak-15.0.2\labs\photoz-uma\photoz-app\src\main\java\org\keycloak\example\photoz\app\service\ObjectMapperProvider.java
+X:\_TOOLS\keycloak-15.0.2\labs\photoz-uma\photoz-app\src\main\java\org\keycloak\example\photoz\app\config\SecurityConfig.java
+X:\_TOOLS\keycloak-15.0.2\labs\photoz-uma\photoz-app\src\main\java\org\keycloak\example\photoz\app\web\CarsAppController.java
+X:\_TOOLS\keycloak-15.0.2\labs\photoz-uma\photoz-app\src\main\java\org\keycloak\example\photoz\app\config\AppConfig.java
+X:\_TOOLS\keycloak-15.0.2\labs\photoz-uma\photoz-app\src\main\java\org\keycloak\example\photoz\app\config\UMAErrorHandler.java
+X:\_TOOLS\keycloak-15.0.2\labs\photoz-uma\photoz-app\src\main\java\org\keycloak\example\photoz\app\config\RptStore.java
+X:\_TOOLS\keycloak-15.0.2\labs\photoz-uma\photoz-app\src\main\java\org\keycloak\example\photoz\app\util\AppTokenUtil.java

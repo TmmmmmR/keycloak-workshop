@@ -1,0 +1,10 @@
+X:\_TOOLS\keycloak-15.0.2\labs\photoz-uma\photoz-service\src\main\java\org\keycloak\example\photoz\util\ServiceTokenUtil.java
+X:\_TOOLS\keycloak-15.0.2\labs\photoz-uma\photoz-service\src\main\java\org\keycloak\example\photoz\service\InMemoryPhotozDB.java
+X:\_TOOLS\keycloak-15.0.2\labs\photoz-uma\photoz-service\src\main\java\org\keycloak\example\photoz\service\PhotozService.java
+X:\_TOOLS\keycloak-15.0.2\labs\photoz-uma\photoz-service\src\main\java\org\keycloak\example\photoz\config\KeycloakUMAConfigResolver.java
+X:\_TOOLS\keycloak-15.0.2\labs\photoz-uma\photoz-service\src\main\java\org\keycloak\example\photoz\util\ImgUtil.java
+X:\_TOOLS\keycloak-15.0.2\labs\photoz-uma\photoz-service\src\main\java\org\keycloak\example\photoz\service\OwnerRepresentation.java
+X:\_TOOLS\keycloak-15.0.2\labs\photoz-uma\photoz-service\src\main\java\org\keycloak\example\photoz\service\PhotoRepresentation.java
+X:\_TOOLS\keycloak-15.0.2\labs\photoz-uma\photoz-service\src\main\java\org\keycloak\example\photoz\web\PhotozServiceController.java
+X:\_TOOLS\keycloak-15.0.2\labs\photoz-uma\photoz-service\src\main\java\org\keycloak\example\photoz\PhotozServiceApp.java
+X:\_TOOLS\keycloak-15.0.2\labs\photoz-uma\photoz-service\src\main\java\org\keycloak\example\photoz\service\PhotozAuthzService.java
