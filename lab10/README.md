@@ -1,4 +1,4 @@
-# Lab 10 : UMA
+# Lab 10 : User-Managed Access (UMA 2.0)
 
 This lab demonstrates how User-Managed Access (UMA 2.0) can be used in Keycloak to manage
 access to resources (in this case photo albums). It consists of a simple application based on *Spring Boot*

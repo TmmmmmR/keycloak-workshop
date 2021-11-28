@@ -13,24 +13,48 @@ __Table of Contents (Tu Update)__
     * [Lab: Authorization Grant Flows in Action](intro-labs/oauth-grants)
     * [Demo: Auth Code Flow in Action](intro-labs/auth-code-demo)
     * [Demo: GitHub Client](intro-labs/github-client)
-  * [Hands-On Labs](#hands-on-labs)
+  * [Part 1 : OAuth 2.0 and OpenID Connect 1.0](#hands-on-labs)
     * [Lab 1: Resource Server](lab1)
     * [Lab 2: Client (Auth Code)](lab2)
     * [Lab 3: Client (Client-Credentials)](lab3)
     * [Lab 4: Testing JWT Auth&Authz](lab4)
     * [Lab 5: JWT Testing Server](lab5)
     * [Lab 6: SPA Client (Authz Code with PKCE)](lab6)
+    
+  * [Part 2 : Fine-grained authorization](#hands-on-labs)
+    * [Lab 7: SpringBoot REST Service Protected Using Keycloak Authorization Services](lab7)
+    * [Lab 8: Spring Security Application using Authorization Services](lab8)
+    * [Lab 9: SpringBoot REST Service Protected Using Keycloak Authorization Services (Javascript Policies)](lab9)
+    * [Lab 10: User-Managed Access (UMA 2.0)](lab10)
+
+  * [Part 3 : SAML](#hands-on-labs)
+    * [Lab 11: Spring Boot Application with SAML 2.0](lab11)
+    * [Lab 12: SAML SSO using an external identity provider](lab12)
+
+* [Part 4 : User Storage Federation](#hands-on-labs)
+    * [Lab 13: User federation using LDAP](lab13)
+    * [Lab 14: Keycloak User Storage SPI](lab14)
+
+* [Part 5 : MFA](#hands-on-labs)
+    * [Lab 15: Keycloak 2FA SMS Authenticator](lab15)
+    * [Lab 16: Conditional Keycloak 2FA SMS Authenticator](lab16)
+
+* [Part 6 : Identity Brokering](#hands-on-labs)
+    * [Lab 17: Using Github as an identity provider](lab17)
+    * [Lab 18: Using Franceconnect as an identity provider](lab18)
+
+
   * [Bonus Labs](#bonus-labs)  
-    * [Demo: Multi-Tenant Resource Server](bonus-labs/multi-tenant-server-app)
-    * [Demo: Resource Server with Micronaut](bonus-labs/micronaut-server-app)
-    * [Demo: Resource Server with Quarkus](bonus-labs/quarkus-server-app)
-    * [Lab: Keycloak Testcontainers](bonus-labs/keycloak-test-containers)
+    * [Lab 1: Multi-Tenant Resource Server](bonus-labs/multi-tenant-server-app)
+    * [Lab 2: Resource Server with Micronaut](bonus-labs/micronaut-server-app)
+    * [Lab 3: Resource Server with Quarkus](bonus-labs/quarkus-server-app)
+    * [Lab 4: Keycloak Testcontainers](bonus-labs/keycloak-test-containers)
 * [Feedback](#feedback)
 * [License](#license)    
 
 ## Workshop Tutorial
 
-To follow the hands-on workshop please open the [workshop tutorial](https://tmmmmmr.gitbook.io/keycloak-workshop).
+To follow the hands-on workshop please open the [workshop tutorial](https://appsec-tmr.gitbook.io/keycloak-workshop/).
 
 ## Requirements and Setup
 
