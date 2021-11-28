@@ -31,15 +31,15 @@ __Table of Contents (Tu Update)__
     * [Lab 11: Spring Boot Application with SAML 2.0](lab11)
     * [Lab 12: SAML SSO using an external identity provider](lab12)
 
-* [Part 4 : User Storage Federation](#hands-on-labs)
+  * [Part 4 : User Storage Federation](#hands-on-labs)
     * [Lab 13: User federation using LDAP](lab13)
     * [Lab 14: Keycloak User Storage SPI](lab14)
 
-* [Part 5 : MFA](#hands-on-labs)
+  * [Part 5 : MFA](#hands-on-labs)
     * [Lab 15: Keycloak 2FA SMS Authenticator](lab15)
     * [Lab 16: Conditional Keycloak 2FA SMS Authenticator](lab16)
 
-* [Part 6 : Identity Brokering](#hands-on-labs)
+  * [Part 6 : Identity Brokering](#hands-on-labs)
     * [Lab 17: Using Github as an identity provider](lab17)
     * [Lab 18: Using Franceconnect as an identity provider](lab18)
 
