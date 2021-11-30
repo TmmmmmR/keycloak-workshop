@@ -36,7 +36,7 @@ public class BooksController {
     model.addAttribute("fullname", oidcUser.getName());
     model.addAttribute(
         "isCurator",
-        ((JSONArray) oidcUser.getClaim("groups")).get(0).equals("library_curator"));
+        ((com.nimbusds.jose.shaded.json.JSONArray) oidcUser.getClaim("groups")).get(0).equals("library_curator"));
     return webClient
         .get()
         .uri(libraryServer + "/books")
