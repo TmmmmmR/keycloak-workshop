@@ -159,7 +159,7 @@ curl http://localhost:8080/api/admin?parameter-a=claim-value \
 ```
 
 If you don't set the request parameter `parameter-a` with that value the request will be denied. The reason for that is that this particular path
-is defined as follows in [src/main/resources/application.properties](app-authz-rest-springboot/src/main/resources/application.properties):
+is defined as follows in [src/main/resources/application.properties](app-authz-rest-springboot-complete/src/main/resources/application.properties):
 
 ```bash
 keycloak.policy-enforcer-config.paths[0].path=/api/admin

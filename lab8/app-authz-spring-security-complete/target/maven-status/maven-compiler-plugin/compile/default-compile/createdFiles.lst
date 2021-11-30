@@ -1,0 +1,5 @@
+org\keycloak\quickstart\springsecurity\web\Identity.class
+org\keycloak\quickstart\springsecurity\web\SecurityConfig.class
+org\keycloak\quickstart\springsecurity\web\MyApplication.class
+org\keycloak\quickstart\springsecurity\web\ApplicationController.class
+org\keycloak\quickstart\springsecurity\web\SecurityConfig$1.class
