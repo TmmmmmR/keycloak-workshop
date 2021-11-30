@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.ineat.tutorials.springkeycloaktutorials.SpringKeycloakTutorialsSecurityTests
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.327 s - in com.ineat.tutorials.springkeycloaktutorials.SpringKeycloakTutorialsSecurityTests
