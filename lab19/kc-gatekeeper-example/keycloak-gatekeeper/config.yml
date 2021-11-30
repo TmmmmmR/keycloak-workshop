@@ -1,0 +1,29 @@
+# Keycloak URL
+discovery-url: http://host.docker.internal:8888/auth/realms/WordPress
+
+# Client credentials
+client-id: gatekeeper-api
+client-secret: '123456'
+
+listen: 0.0.0.0:3000
+
+# Gatekeeper settings
+redirection-url: http://host.docker.internal:8880
+encryption-key: 1234567890123456
+enable-session-cookies: true
+secure-cookie: false
+
+# URL of the website we want to secure
+upstream-url: http://host.docker.internal:8880
+
+upstream-keepalives: true
+skip-upstream-tls-verify: true
+scopes: []
+enable-security-filter: true
+headers:
+  myheader_name: my_header_value
+resources:
+  # Here we can specify the URL to protect (example /admin)
+  - uri: /*
+    methods:
+      - GET
