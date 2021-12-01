@@ -123,7 +123,7 @@ If everything is correct, you will be redirect to Keycloak login page. You can l
 
 The following schema explained the test senario we want to perform :
 
-[UMA](images/uma-share-impl.svg)
+![UMA](images/uma-share-impl.svg)
 
 * Let's first login as Alice (username: alice, password: alice). Once logged in, the `photoz` client app will display a simple
 page containing some links that can be used to display things like the RPT or the Access Token. While it is interesting to
