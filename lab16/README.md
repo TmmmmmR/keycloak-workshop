@@ -27,8 +27,6 @@ Select the admin role :
 
 ![SMS Authentication flow](images/4_select_admin_role.JPG)
 
-![SMS Authentication flow](images/5_add_admin_role.JPG)
-
 This will enable this authenticator only for admin accounts. 
 
 The final configuration will look like this :
