@@ -45,10 +45,11 @@ __Table of Contents (Tu Update)__
 
 
   * [Bonus Labs](#bonus-labs)  
-    * [Lab 1: Multi-Tenant Resource Server](bonus-labs/multi-tenant-server-app)
-    * [Lab 2: Resource Server with Micronaut](bonus-labs/micronaut-server-app)
-    * [Lab 3: Resource Server with Quarkus](bonus-labs/quarkus-server-app)
-    * [Lab 4: Keycloak Testcontainers](bonus-labs/keycloak-test-containers)
+    * [Multi-Tenant Resource Server](bonus-labs/multi-tenant-server-app)
+    * [Resource Server with Micronaut](bonus-labs/micronaut-server-app)
+    * [Resource Server with Quarkus](bonus-labs/quarkus-server-app)
+    * [Keycloak Testcontainers](bonus-labs/keycloak-test-containers)
+    * [Keycloak Gatekeeper](bonus-labs/kc-gatekeeper)
 * [Feedback](#feedback)
 * [License](#license)    
 
@@ -108,12 +109,17 @@ starting with the first hands-on lab__.
 * [Lab 17: Using Github as an identity provider](lab17)
 * [Lab 18: Using Franceconnect as an identity provider](lab18)
 
+### Part 7 : Extending Keycloak
+* [Lab 19 : Simple Risk-Based Authenticator](lab19)
+* [Lab 20 : Creating and deploying a new theme](lab20)
+
 ### Bonus Labs
 
-* [Lab 1 : Multi-Tenant Resource Server](bonus-labs/multi-tenant-server-app)
-* [Lab 2 : OAuth2/OIDC Resource Server with Micronaut](bonus-labs/micronaut-server-app)
-* [Lab 3 : OAuth2/OIDC Resource Server with Quarkus](bonus-labs/quarkus-server-app)
-* [Lab 4 : Keycloak Testcontainers](bonus-labs/keycloak-test-containers)
+* [Multi-Tenant Resource Server](bonus-labs/multi-tenant-server-app)
+* [OAuth2/OIDC Resource Server with Micronaut](bonus-labs/micronaut-server-app)
+* [OAuth2/OIDC Resource Server with Quarkus](bonus-labs/quarkus-server-app)
+* [Keycloak Testcontainers](bonus-labs/keycloak-test-containers)
+* [Keycloak Gatekeeper](bonus-labs/kc-gatekeeper)
 
 
 ## Reference

@@ -25,7 +25,7 @@ And then we open the configuration page related to this new Authenticator :
 
 Select the admin role :
 
-![SMS Authentication flow](images/4_add_admin_role.JPG)
+![SMS Authentication flow](images/4_select_admin_role.JPG)
 
 This will enable this authenticator only for admin accounts. 
 
@@ -33,7 +33,7 @@ The final configuration will look like this :
 
 ![SMS Authentication flow](images/5_final_config.JPG)
 
-### Step 1 : Test
+### Step 2 : Test
 
 Now it's time to test your new flow : try to login using different accounts (Admin and a simple user) so you can see the difference.
 

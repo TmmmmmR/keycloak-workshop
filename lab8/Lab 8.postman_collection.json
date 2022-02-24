@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "4f1bdc44-67d7-45a0-a8cf-9eede9281cbd",
-		"name": "Lab 9",
+		"_postman_id": "5f4dc355-6e70-4f13-adb9-a52773001947",
+		"name": "Lab 8",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -87,7 +87,7 @@
 			"response": []
 		},
 		{
-			"name": "Request /api/{resource}  path",
+			"name": "Request /protected  path",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -96,13 +96,12 @@
 						"value": "Bearer {{Token}}"
 					}
 				],
-				"url": "{{APP_URL}}/api/resourcea",
-				"description": "Dont forget to set Bearer value obtains from token request"
+				"url": "{{APP_URL}}/protected"
 			},
 			"response": []
 		},
 		{
-			"name": "Request /api/premium path",
+			"name": "Request /protected/premium path",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -111,90 +110,22 @@
 						"value": "Bearer {{Token}}"
 					}
 				],
-				"url": "{{APP_URL}}/api/premium",
+				"url": "{{APP_URL}}/protected/premium",
 				"description": "Dont forget to set Bearer value obtains from token request"
 			},
 			"response": []
 		},
 		{
-			"name": "Request /api/admin path",
+			"name": "Request/protected/{username} path",
 			"request": {
 				"method": "GET",
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer {{Token}}"
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2MzgzMDE4MjAsImlhdCI6MTYzODMwMTUyMCwianRpIjoiNDY0ZjFlN2MtYjlhZS00MjAwLWI2OTEtYmY1ZTM1ODY0NGNhIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiJmNjhhOGY2Yy00NjlmLTRjZmYtYWVlOS02OTVlNTYyOGJmYzkiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6ImFlZDg4NWM5LTE1ZTktNDQ3ZC1hZWRlLWZjNGQyZDVhMTMzZiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1bWFfYXV0aG9yaXphdGlvbiIsInVzZXItcHJlbWl1bSIsInVzZXIiXX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6ImFlZDg4NWM5LTE1ZTktNDQ3ZC1hZWRlLWZjNGQyZDVhMTMzZiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiamRvZSJ9.FdiD4iHFa_r76xQ7s5yRM4TPi_hMsvJNzk0Q2KbSPETvTUupoOxNL2AApd07UQlqVHoNkmsgBwhzTah83mmYTcWgFUMtClPXMVS-YkxkLOXoIhgx6ZdvMR16S9XEwt8iHmDyMbIGi-MwNB0emche8uZJBeD24y6gttaU2KGlH7w"
 					}
 				],
-				"url": {
-					"raw": "{{APP_URL}}/api/admin?parameter-a=claim-value",
-					"host": [
-						"{{APP_URL}}"
-					],
-					"path": [
-						"api",
-						"admin"
-					],
-					"query": [
-						{
-							"key": "parameter-a",
-							"value": "claim-value"
-						}
-					]
-				},
-				"description": "Dont forget to set Bearer value obtains from token request"
-			},
-			"response": []
-		},
-		{
-			"name": "Get RPT Token",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"var data = pm.response.json();\r",
-							"pm.environment.set(\"Token\", data.access_token);"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer {{Token}}"
-					}
-				],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "grant_type",
-							"value": "urn:ietf:params:oauth:grant-type:uma-ticket",
-							"type": "text"
-						},
-						{
-							"key": "audience",
-							"value": "app-authz-rest-springboot",
-							"type": "text"
-						},
-						{
-							"key": "permission",
-							"value": "Default Resource",
-							"type": "text",
-							"disabled": true
-						},
-						{
-							"key": "permission",
-							"value": "Premium Resource",
-							"type": "text"
-						}
-					]
-				},
-				"url": "{{KC_URL}}/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+				"url": "{{APP_URL}}/protected/alice",
 				"description": "Dont forget to set Bearer value obtains from token request"
 			},
 			"response": []

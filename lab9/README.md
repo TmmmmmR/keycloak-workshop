@@ -49,10 +49,10 @@ The following steps show how to create the realm required for this lab:
 
 * Open the Keycloak Admin Console
 * In the top left corner dropdown menu that is titled `Master`, click `Add Realm`. If you are logged in to the master realm this dropdown menu lists all the realms created.
-* For this lab we are not going to manually create the realm, but import all configuration from a JSON file. Click on `Select File` and import the [config/quickstart-realm](config/quickstart-realm.json).
+* For this lab we are not going to manually create the realm, but import all configuration from a JSON file. Click on `Select File` and import the [config/quickstart-realm](config/lab9.json).
 * Click `Create`
 
-The steps above will result on a new `spring-boot-quickstart` realm.
+The steps above will result on a new `lab9` realm.
 
 Build and Run the lab
 -------------------------------
@@ -76,7 +76,7 @@ on behalf of user `jdoe`, just make sure to change both `username` and `password
 
 ```bash
  export access_token=$(\
-    curl -X POST http://localhost:8180/auth/realms/spring-boot-quickstart/protocol/openid-connect/token \
+    curl -X POST http://localhost:8180/auth/realms/lab9/protocol/openid-connect/token \
     -H 'Authorization: Basic YXBwLWF1dGh6LXJlc3Qtc3ByaW5nYm9vdDpzZWNyZXQ=' \
     -H 'content-type: application/x-www-form-urlencoded' \
     -d 'username=alice&password=alice&grant_type=password' | jq --raw-output '.access_token' \
@@ -109,7 +109,7 @@ To obtain an RPT, you must first exchange an OAuth2 Access Token for a RPT by in
 
 ```bash
 export rpt=$(curl -X POST \
- http://localhost:8180/auth/realms/spring-boot-quickstart/protocol/openid-connect/token \
+ http://localhost:8180/auth/realms/lab9/protocol/openid-connect/token \
  -H "Authorization: Bearer "$access_token \
  --data "grant_type=urn:ietf:params:oauth:grant-type:uma-ticket" \
  --data "audience=app-authz-rest-springboot" \
@@ -124,7 +124,7 @@ As an alternative, you can also obtain permissions for any resource protected by
 
 ```bash
 export rpt=$(curl -X POST \
- http://localhost:8180/auth/realms/spring-boot-quickstart/protocol/openid-connect/token \
+ http://localhost:8180/auth/realms/lab9/protocol/openid-connect/token \
  -H "Authorization: Bearer "$access_token \
  --data "grant_type=urn:ietf:params:oauth:grant-type:uma-ticket" \
  --data "audience=app-authz-rest-springboot" | jq --raw-output '.access_token' \

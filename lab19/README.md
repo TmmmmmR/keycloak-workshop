@@ -1,13 +1,13 @@
-# Lab 19 : The Gatekeeper
+# Lab 12 : Simple Risk-Based Authenticator
 
-The Keycloak Gatekeeper offers a very simple and flexible Reverse Proxy that handles all the OIDC-related authentication for upstream services. 
+To build this project, execute the following command:
 
-In this lab we provide a very basic example on how to run a keycloak gatekeeper with an upstream app (wordpress website).
+    ./mvnw clean install
 
-To build the lab, run the following command from the gatekeeper source folder :
+Then copy the `target/simple-risk-based-authenticator.jar` to the `$KC_HOME/standalone/deployments` directory.
 
-```bash
-docker-compose up
-```
+### What is here
 
-For more information about the keycloak gatekeeper, check the [documentation page](https://github.com/louketo/louketo-proxy/blob/master/docs/user-guide.md)
+* An example of how to leverage the `Authentication SPI` to create and configure authenticators
+* A very simple example of how to use an authenticator to perform risk-based authenticator where the user is forced to use
+a second factor depending on the number of failed login attempts
