@@ -33,7 +33,7 @@ __Table of Contents (Tu Update)__
 
   * [Part 4 : User Storage Federation](#hands-on-labs)
     * [Lab 13: User federation using LDAP](lab13)
-    * [Lab 14: Keycloak User Storage SPI](lab14)
+    * [Lab 14: Keycrloak User Stoage SPI](lab14)
 
   * [Part 5 : MFA](#hands-on-labs)
     * [Lab 15: Keycloak 2FA SMS Authenticator](lab15)
@@ -111,7 +111,11 @@ starting with the first hands-on lab__.
 
 ### Part 7 : Extending Keycloak
 * [Lab 19 : Simple Risk-Based Authenticator](lab19)
-* [Lab 20 : Creating and deploying a new theme](lab20)
+* [Lab 20 : Custom protocol token mapper](lab20)
+* [Lab 21 : Custom Keycloak Required Action](lab21)
+* [Lab 20 : Custom REST resource/endpoint](lab22)
+* [Lab 20 : Creating and deploying a new theme](lab23)
+
 
 ### Bonus Labs
 

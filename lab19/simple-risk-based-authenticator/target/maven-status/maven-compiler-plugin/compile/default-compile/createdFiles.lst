@@ -1,0 +1,3 @@
+org\keycloak\book\ch13\authentication\MySimpleRiskBasedAuthenticatorFactory.class
+org\keycloak\book\ch13\authentication\MySimpleRiskBasedAuthenticator$RiskScore.class
+org\keycloak\book\ch13\authentication\MySimpleRiskBasedAuthenticator.class

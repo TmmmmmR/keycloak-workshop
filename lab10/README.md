@@ -49,10 +49,10 @@ In addition it provides some background on how one can actually protect Rest end
 
 ## Folder Contents
 
-In the lab 1 folder you find 2 applications:
+In the lab folder you have 2 applications:
 
-* **photoz-service**, a simple RESTFul API based acting as a resource server.
-* **photoz-app**, a Spring Boot client that will consume the RESTful API published by a resource server.
+* **photoz-service** : a simple RESTFul API based acting as a Resource Server.
+* **photoz-app** : a Spring Boot client that will consume the RESTful API published by a Resource Server, and intercat with protection API token (PAT) on behalf of the user in order to manage to access UMA protected resources. Please refer to the offficial [Keycloak documentation](https://www.keycloak.org/docs/latest/authorization_services/#_service_protection_api) for more details.
 
 
 ## Start the Lab
@@ -62,20 +62,19 @@ Let's this lab by creating the Example Realm and the Resource Server.
 The Realm contains a Javascript Policy, so we need to restart our Keycloak using the following command :
 
    ````
-   .\bin\standalone.bat -Dkeycloak.profile.feature.upload_scripts=enabled -Dkeycloak.profile.feature.scripts=enabled
+   .\bin\standalone.bat  -Djboss.socket.binding.port-offset=100 -Dkeycloak.profile.feature.upload_scripts=enabled -Dkeycloak.profile.feature.scripts=enabled
  
    ````
 Now, log in to the Keycloak Administration Console and create a new realm based on the following configuration file:
 
-
-[photoz-realm.json](./photoz-realm.json)
+[photoz-realm.json](./config/photoz-realm.json)
  
 That will import a pre-configured realm with everything you need to run this lab. For more details about how to import a realm 
 into Keycloak, check the Keycloak's reference documentation.
 
 After importing that file, you'll have a new realm called `photoz`.
 
-## Deploy and Run the quickstart applications
+## Deploy and Run the applications
 
 To deploy the quickstart applications, first deploy the client:
 
@@ -167,10 +166,10 @@ This tells John that he doesn't have the permissions to delete this album and if
 * First create an random photo. We won't be sharing this photo with anybody but the `admin`
 should still be able to see it when he logs (we will cover that part later on) because administrators should be able to
 see all the albums created by all users.
-* The next step is to request Alice the permissions to delete the second photo. Click on the `Request Delete Access`
+* The next step is to request Alice the permissions to delete the second photo. Click on the `Ask For Delete`
 link. The app displays the following message:
    ````
-   Sent authorization request to resource owner, please, wait for approval.
+   Submitted request to the photo owner to grant you a permission.
    ````
 * Next click on the `My Account` link at the top of the page and then click on `Resources`. Notice how the page shows
 both John's own resources and also the resources Alice shared with him (on `Shared with Me` tab).
