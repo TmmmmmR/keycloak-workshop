@@ -20,6 +20,7 @@ import java.util.*;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
+// Implementing the UserStoragePROVIDER (with the user lookup methods)
 public class DemoUserStorageProvider implements UserStorageProvider,
 		UserLookupProvider,
 		UserRegistrationProvider,
@@ -114,6 +115,8 @@ public class DemoUserStorageProvider implements UserStorageProvider,
 		logger.info("getUsersCount("+realm+")");
 		return userDAO.size();
 	}
+
+	// users lookups
 
 	@Override
 	public List<UserModel> getUsers(RealmModel realm) {

@@ -29,7 +29,7 @@ import java.net.URL;
 import java.util.*;
 
 /**
- * DemoUserStorageProviderFactory
+ * Implementing the UserStoragePROVIDER (with the user lookup methods)
  */
 @JBossLog
 public class DemoUserStorageProviderFactory implements UserStorageProviderFactory<DemoUserStorageProvider> {

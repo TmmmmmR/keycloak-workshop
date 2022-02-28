@@ -57,6 +57,8 @@ __Table of Contents (Tu Update)__
     * [Resource Server with Quarkus](bonus-labs/quarkus-server-app)
     * [Keycloak Testcontainers](bonus-labs/keycloak-test-containers)
     * [Keycloak Gatekeeper](bonus-labs/kc-gatekeeper)
+    * [SAML](bonus-labs/saml)
+
 * [Feedback](#feedback)
 * [License](#license)    
 

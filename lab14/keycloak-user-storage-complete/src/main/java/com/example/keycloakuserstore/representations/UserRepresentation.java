@@ -13,6 +13,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+// Implementing the UserMODEL - the UserAdapter, where all the attribute mappings happen
+
 public class UserRepresentation extends AbstractUserAdapterFederatedStorage {
     private User userEntity;
     private UserDAO userDAO;
