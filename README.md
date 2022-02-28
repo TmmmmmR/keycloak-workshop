@@ -43,6 +43,13 @@ __Table of Contents (Tu Update)__
     * [Lab 17: Using Github as an identity provider](lab17)
     * [Lab 18: Using Franceconnect as an identity provider](lab18)
 
+  * [Part 7 : Extending Keycloak](#hands-on-labs)
+    * [Lab 19 : Simple Risk-Based Authenticator](lab19)
+    * [Lab 20 : Custom protocol token mapper](lab20)
+    * [Lab 21 : Custom Keycloak Required Action](lab21)
+    * [Lab 22 : Custom Event Listener](lab22)
+    * [Lab 23 : Custom REST resource/endpoint](lab23)
+    * [Lab 24 : Creating and deploying a new theme](lab24)
 
   * [Bonus Labs](#bonus-labs)  
     * [Multi-Tenant Resource Server](bonus-labs/multi-tenant-server-app)
@@ -113,8 +120,9 @@ starting with the first hands-on lab__.
 * [Lab 19 : Simple Risk-Based Authenticator](lab19)
 * [Lab 20 : Custom protocol token mapper](lab20)
 * [Lab 21 : Custom Keycloak Required Action](lab21)
-* [Lab 20 : Custom REST resource/endpoint](lab22)
-* [Lab 20 : Creating and deploying a new theme](lab23)
+* [Lab 22 : Custom Event Listener](lab22)
+* [Lab 23 : Custom REST resource/endpoint](lab23)
+* [Lab 24 : Creating and deploying a new theme](lab24)
 
 
 ### Bonus Labs
