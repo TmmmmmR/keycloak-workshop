@@ -65,7 +65,7 @@
 						},
 						{
 							"key": "client_id",
-							"value": "app-authz-spring-security",
+							"value": "app-authz-rest-springboot",
 							"type": "text"
 						},
 						{
@@ -122,7 +122,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2MzgzMDE4MjAsImlhdCI6MTYzODMwMTUyMCwianRpIjoiNDY0ZjFlN2MtYjlhZS00MjAwLWI2OTEtYmY1ZTM1ODY0NGNhIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiJmNjhhOGY2Yy00NjlmLTRjZmYtYWVlOS02OTVlNTYyOGJmYzkiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6ImFlZDg4NWM5LTE1ZTktNDQ3ZC1hZWRlLWZjNGQyZDVhMTMzZiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1bWFfYXV0aG9yaXphdGlvbiIsInVzZXItcHJlbWl1bSIsInVzZXIiXX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6ImFlZDg4NWM5LTE1ZTktNDQ3ZC1hZWRlLWZjNGQyZDVhMTMzZiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiamRvZSJ9.FdiD4iHFa_r76xQ7s5yRM4TPi_hMsvJNzk0Q2KbSPETvTUupoOxNL2AApd07UQlqVHoNkmsgBwhzTah83mmYTcWgFUMtClPXMVS-YkxkLOXoIhgx6ZdvMR16S9XEwt8iHmDyMbIGi-MwNB0emche8uZJBeD24y6gttaU2KGlH7w"
+						"value": "Bearer {{Token}}"
 					}
 				],
 				"url": "{{APP_URL}}/protected/alice",
