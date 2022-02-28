@@ -65,7 +65,7 @@
 						},
 						{
 							"key": "client_id",
-							"value": "app-authz-rest-springboot",
+							"value": "app-authz-spring-security",
 							"type": "text"
 						},
 						{

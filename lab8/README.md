@@ -56,21 +56,21 @@ You should also deploy some JS policies into the Keycloak Server. For that, perf
    mvn -f ../lab9/js-authz-policies clean install && cp ../js-authz-policies/target/js-authz-policies.jar {KEYCLOAK_HOME}/standalone/deployments
    ````
 
-To create the realm required for this quickstart, follow these steps:
+To create the realm required for this lab, follow these steps:
 
 1. Open the <span>Keycloak</span> admin console
 2. In the top left corner dropdown menu that is titled `Master`, click `Add Realm`. If you are logged in to the master realm this dropdown menu lists all the realms created.
 3. For this quickstart we are not going to manually create the realm, but import all configuration from a JSON file. Click on `Select File` and import the [config/lab8.json](config/lab8.json).
 4. Click `Create`
 
-The steps above will result on a new `spring-security-quickstart` realm.
+The steps above will result on a new `Lab8` realm.
 
 Build and Run the lab
 -------------------------------
 
 If your server is up and running, perform the following steps to start the application:
 
-1. Open a terminal and navigate to the root directory of this quickstart.
+1. Open a terminal and navigate to the root directory of this lab.
 
 2. The following shows the command to deploy the lab:
 

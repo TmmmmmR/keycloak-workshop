@@ -59,7 +59,7 @@ Build and Run the lab
 
 If your server is up and running, perform the following steps to start the application:
 
-1. Open a terminal and navigate to the root directory of the project app-authz-rest-springboot.
+1. Open a terminal and navigate to the root directory of the project app-authz-rest-springboot-complete.
 
 2. The following shows the command to run the application:
 
