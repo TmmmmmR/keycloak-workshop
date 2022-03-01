@@ -38,7 +38,7 @@ Once you are done, click on the **Save** button:
 
 At the end, the new **My Risk-Based Browser Flow** should look like this:
 
-![The final configuration for My Risk-Based Browser Flow](images/cfinal_config.jpg)
+![The final configuration for My Risk-Based Browser Flow](images/final_config.jpg)
 
 Finally, let's enable the **Brute Force Detection** feature to the realm. This feature is responsible to track failed login attempts and avoid brute force attacks when an attacker is trying to guess users' passwords. The custom authenticator we just configured relies on this feature to track the number of failed login attempts. To enable the feature, click on the **Realm Settings** item on the left-side panel. Once at this page, click on the **Security Defenses** tab and then click on the **Brute Force Detection** sub-tab. Once at this tab, turn on the **Enabled** setting:
 
