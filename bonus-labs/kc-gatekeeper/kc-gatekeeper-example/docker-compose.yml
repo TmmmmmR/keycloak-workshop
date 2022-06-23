@@ -14,11 +14,13 @@ services:
       - KEYCLOAK_IMPORT=/opt/jboss/import/realm-export.json
   keycloak-gatekeeper:
     container_name: keycloak-gatekeeper
-    image: keycloak/keycloak-gatekeeper
+    image: bitnami/keycloak-gatekeeper:2-scratch
     # entrypoint: 'sh -c "while :; do sleep 1; done"'
-    command: ['--config', '/opt/config.yml']
+    command:
+      - /keycloak-proxy
+      - "--config=/etc/keycloak-gatekeeper.conf"
     volumes:
-      - ./keycloak-gatekeeper/config.yml:/opt/config.yml
+      - ./keycloak-gatekeeper/config.yml:/etc/keycloak-gatekeeper.conf
     ports:
       - 3000:3000
     restart: always # restart it until our keycloak instance is up
