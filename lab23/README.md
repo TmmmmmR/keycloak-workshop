@@ -5,5 +5,5 @@ This lab demonstrate how to implement custom REST resources within Keycloak, pub
 The endpoints are available in every realm :
 
 ```
-/auth/realms/{realm-name}/{provider-id}/{resource-path}
+/realms/{realm-name}/{provider-id}/{resource-path}
 ```

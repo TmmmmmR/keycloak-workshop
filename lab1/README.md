@@ -175,17 +175,17 @@ to completely configure the resource server to use our keycloak instance.
   
 __Make sure keycloak has been started as described in the [setup section](../setup/README.md).__
 
-Navigate your web browser to the url [localhost:8080/auth/realms/workshop/.well-known/openid-configuration](http://localhost:8080/auth/realms/workshop/.well-known/openid-configuration).  
+Navigate your web browser to the url [localhost:8080/realms/workshop/.well-known/openid-configuration](http://localhost:8080/realms/workshop/.well-known/openid-configuration).  
 Then you should see the public discovery information that keycloak provides 
 (like the following, which only shows partial information).
 
 ```json
 {
-  "issuer": "http://localhost:8080/auth/realms/workshop",
-  "authorization_endpoint": "http://localhost:8080/auth/realms/workshop/protocol/openid-connect/auth",
-  "token_endpoint": "http://localhost:8080/auth/realms/workshop/protocol/openid-connect/token",
-  "userinfo_endpoint": "http://localhost:8080/auth/realms/workshop/protocol/openid-connect/userinfo",
-  "jwks_uri": "http://localhost:8080/auth/realms/workshop/protocol/openid-connect/certs"
+  "issuer": "http://localhost:8080/realms/workshop",
+  "authorization_endpoint": "http://localhost:8080/realms/workshop/protocol/openid-connect/auth",
+  "token_endpoint": "http://localhost:8080/realms/workshop/protocol/openid-connect/token",
+  "userinfo_endpoint": "http://localhost:8080/realms/workshop/protocol/openid-connect/userinfo",
+  "jwks_uri": "http://localhost:8080/realms/workshop/protocol/openid-connect/certs"
 }  
 ```
 
@@ -210,7 +210,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://localhost:8080/auth/realms/workshop/protocol/openid-connect/certs
+          jwk-set-uri: http://localhost:8080/realms/workshop/protocol/openid-connect/certs
 ```
 **Hint: An error you get very often with files in yaml format is that the indents are not correct. 
 This can lead to unexpected errors later when you try to run all this stuff.**
@@ -366,7 +366,7 @@ This is how this password grant request looks like:
 httpie:
 
 ```shell
-http --form http://localhost:8080/auth/realms/workshop/protocol/openid-connect/token grant_type=password \
+http --form http://localhost:8080/realms/workshop/protocol/openid-connect/token grant_type=password \
 username=ckent password=kent client_id=library-client client_secret=9584640c-3804-4dcd-997b-93593cfb9ea7
 ``` 
 
@@ -374,7 +374,7 @@ curl:
 
 ```shell
 curl -X POST -d 'grant_type=password&username=ckent&password=kent&client_id=library-client&client_secret=9584640c-3804-4dcd-997b-93593cfb9ea7' \
-http://localhost:8080/auth/realms/workshop/protocol/openid-connect/token
+http://localhost:8080/realms/workshop/protocol/openid-connect/token
 ```
 
 This should return an access token together with a refresh token:
@@ -839,8 +839,8 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://localhost:8080/auth/realms/workshop/protocol/openid-connect/certs
-          issuer-uri: http://localhost:8080/auth/realms/workshop
+          jwk-set-uri: http://localhost:8080/realms/workshop/protocol/openid-connect/certs
+          issuer-uri: http://localhost:8080/realms/workshop
 ```
 
 Now we can re-start the application and test again the same request we had retrieved an '403' error before.
@@ -851,7 +851,7 @@ First get another fresh access token:
 httpie:
 
 ```shell
-http --form http://localhost:8080/auth/realms/workshop/protocol/openid-connect/token grant_type=password \
+http --form http://localhost:8080/realms/workshop/protocol/openid-connect/token grant_type=password \
 username=ckent password=kent client_id=library-client client_secret=9584640c-3804-4dcd-997b-93593cfb9ea7
 ``` 
 
@@ -859,7 +859,7 @@ curl:
 
 ```shell
 curl -X POST -d 'grant_type=password&username=ckent&password=kent&client_id=library-client&client_secret=9584640c-3804-4dcd-997b-93593cfb9ea7' \
-http://localhost:8080/auth/realms/workshop/protocol/openid-connect/token
+http://localhost:8080/realms/workshop/protocol/openid-connect/token
 ```
 
 This should return an access token together with a refresh token:

@@ -89,7 +89,7 @@ Quarkus requires the base URL pointing to the OIDC discovery information to fetc
 This is what the Quarkus configuration looks like in _application.properties_:  
 
 ```properties
-quarkus.oidc.auth-server-url=http://localhost:8080/auth/realms/workshop
+quarkus.oidc.auth-server-url=http://localhost:8080/realms/workshop
 quarkus.oidc.client-id=library-app
 ```
 
@@ -153,7 +153,7 @@ Again we use the password grant flow request to get a token for calling our new 
 httpie:
 
 ```bash
-http --form http://localhost:8080/auth/realms/workshop/protocol/openid-connect/token grant_type=password \
+http --form http://localhost:8080/realms/workshop/protocol/openid-connect/token grant_type=password \
 username=ckent password=kent client_id=library-client client_secret=9584640c-3804-4dcd-997b-93593cfb9ea7
 ``` 
 
@@ -161,7 +161,7 @@ curl:
 
 ```bash
 curl -X POST -d 'grant_type=password&username=ckent&password=kent&client_id=library-client&client_secret=9584640c-3804-4dcd-997b-93593cfb9ea7' \
-http://localhost:8080/auth/realms/workshop/protocol/openid-connect/token
+http://localhost:8080/realms/workshop/protocol/openid-connect/token
 ```
 
 This should return an access token together with a refresh token:

@@ -42,18 +42,23 @@ Configuration in <span>Keycloak</span>
 
 Prior to running the lab you need to create a `realm` in <span>Keycloak</span> with all the necessary configuration to deploy and run the lab.
 
-Make sure your <span>Keycloak</span> server is running on <http://localhost:8180/>. For that, you can start the server using the command below:
-
-   ````
-   cd {KEYCLOAK_HOME}/bin
-   ./standalone.sh -Djboss.socket.binding.port-offset=100
-   
-   ````
-
 You should also deploy some JS policies into the Keycloak Server. For that, perform the following steps:
 
    ````
-   mvn -f ../lab9/js-authz-policies clean install && cp ../js-authz-policies/target/js-authz-policies.jar {KEYCLOAK_HOME}/standalone/deployments
+   mvn -f ../lab9/js-authz-policies clean install && cp ../js-authz-policies/target/js-authz-policies-*.jar {KEYCLOAK_HOME}/providers
+   ````
+
+And then install the policy using using the following the command :
+   ````
+   cd {KEYCLOAK_HOME}/bin
+   ./kc.sh build
+   ````
+
+
+Make sure your <span>Keycloak</span> server is running on <http://localhost:8080/>. For that, you can start the server using the command below:
+
+   ````
+   ./kc.sh start-dev
    ````
 
 To create the realm required for this lab, follow these steps:
@@ -75,14 +80,14 @@ If your server is up and running, perform the following steps to start the appli
 2. The following shows the command to deploy the lab:
 
    ````
-   mvn spring-boot:run
+   ./mvnw spring-boot:run
 
    ````
 
 Access & Play with the lab
 ---------------------
 
-You can access the application with the following URL: <http://localhost:8080/>.
+You can access the application with the following URL: <http://localhost:8081/>.
 
 If you want to play around, try the following steps:
 

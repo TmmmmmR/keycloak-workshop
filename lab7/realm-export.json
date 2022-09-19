@@ -424,13 +424,13 @@
       "id": "aa169386-5dd9-4631-b24b-0c5d7ec2df4a",
       "clientId": "security-admin-console",
       "name": "${client_security-admin-console}",
-      "baseUrl": "/auth/admin/ineat-realm/console/index.html",
+      "baseUrl": "/admin/ineat-realm/console/index.html",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "/auth/admin/ineat-realm/console/*"
+        "/admin/ineat-realm/console/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -583,7 +583,7 @@
       "id": "0ac4cbb2-d365-4fd7-a30f-61838ff979b5",
       "clientId": "account",
       "name": "${client_account}",
-      "baseUrl": "/auth/realms/ineat-realm/account",
+      "baseUrl": "/realms/ineat-realm/account",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
@@ -593,7 +593,7 @@
         "manage-account"
       ],
       "redirectUris": [
-        "/auth/realms/ineat-realm/account/*"
+        "/realms/ineat-realm/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,

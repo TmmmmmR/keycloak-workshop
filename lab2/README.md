@@ -59,7 +59,7 @@ the access token has reached expiration, or the session at keycloak is invalidat
 Either you always open the web client in a private/incognito window of your web browser, or you follow the steps 
 described below:
 
-* Login to keycloak [admin console](http://localhost:8080/auth/admin) and navigate on the left to menu item _session_
+* Login to keycloak [admin console](http://localhost:8080/admin) and navigate on the left to menu item _session_
   Here you'll see all user sessions (active/offline ones). By clicking on the button _Logout all_ you can revoke 
   all active sessions.
 
@@ -133,17 +133,17 @@ to completely configure the client to work together with the Keycloak instance.
   
 __Make sure keycloak has been started as described in the [setup section](../setup/README.md).__
 
-Navigate your web browser to the url [localhost:8080/auth/realms/workshop/.well-known/openid-configuration](http://localhost:8080/auth/realms/workshop/.well-known/openid-configuration).  
+Navigate your web browser to the url [localhost:8080/realms/workshop/.well-known/openid-configuration](http://localhost:8080/realms/workshop/.well-known/openid-configuration).  
 Then you should see the public discovery information that keycloak provides 
 (similar to the following snippet, showing only partial information).
 
 ```json
 {
-  "issuer": "http://localhost:8080/auth/realms/workshop",
-  "authorization_endpoint": "http://localhost:8080/auth/realms/workshop/protocol/openid-connect/auth",
-  "token_endpoint": "http://localhost:8080/auth/realms/workshop/protocol/openid-connect/token",
-  "userinfo_endpoint": "http://localhost:8080/auth/realms/workshop/protocol/openid-connect/userinfo",
-  "jwks_uri": "http://localhost:8080/auth/realms/workshop/protocol/openid-connect/certs"
+  "issuer": "http://localhost:8080/realms/workshop",
+  "authorization_endpoint": "http://localhost:8080/realms/workshop/protocol/openid-connect/auth",
+  "token_endpoint": "http://localhost:8080/realms/workshop/protocol/openid-connect/token",
+  "userinfo_endpoint": "http://localhost:8080/realms/workshop/protocol/openid-connect/userinfo",
+  "jwks_uri": "http://localhost:8080/realms/workshop/protocol/openid-connect/certs"
 }  
 ```
 
@@ -182,7 +182,7 @@ spring:
             scope: openid
         provider:
           keycloak:
-            issuerUri: http://localhost:8080/auth/realms/workshop
+            issuerUri: http://localhost:8080/realms/workshop
             user-name-attribute: name
 ```
 An error you get very often with files in yaml format is that the indents are not correct. 

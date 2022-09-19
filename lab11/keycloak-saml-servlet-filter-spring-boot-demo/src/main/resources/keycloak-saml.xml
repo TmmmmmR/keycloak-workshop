@@ -34,15 +34,15 @@
                                  validateResponseSignature="true"
                                  validateAssertionSignature="false"
                                  requestBinding="POST"
-                                 bindingUrl="http://localhost:8180/auth/realms/saml-demo/protocol/saml"/>
+                                 bindingUrl="http://localhost:8080/realms/saml-demo/protocol/saml"/>
             <SingleLogoutService signRequest="true"
                                  signResponse="true"
                                  validateRequestSignature="true"
                                  validateResponseSignature="true"
                                  requestBinding="POST"
                                  responseBinding="POST"
-                                 postBindingUrl="http://localhost:8180/auth/realms/saml-demo/protocol/saml"
-                                 redirectBindingUrl="http://localhost:8180/auth/realms/saml-demo/protocol/saml"/>
+                                 postBindingUrl="http://localhost:8080/realms/saml-demo/protocol/saml"
+                                 redirectBindingUrl="http://localhost:8080/realms/saml-demo/protocol/saml"/>
         </IDP>
     </SP>
 </keycloak-saml-adapter>

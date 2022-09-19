@@ -185,37 +185,20 @@
             }
           },
           {
-            "id": "ae5e8e31-81a9-4f13-9227-17c639a7ec21",
-            "name": "Only From a Specific Client Address",
-            "description": "Defines that only clients from a specific address can do something",
-            "type": "js",
-            "logic": "POSITIVE",
-            "decisionStrategy": "UNANIMOUS",
-            "config": {
-              "code": "var contextAttributes = $evaluation.getContext().getAttributes();\n\nif (contextAttributes.containsValue('kc.client.network.ip_address', '127.0.0.1')) {\n    $evaluation.grant();\n}"
-            }
-          },
-          {
             "id": "0963d592-1430-4b0b-ac4e-25b68bf39c60",
             "name": "Administration Policy",
-            "description": "Defines that only administrators from a specific network address can do something.",
-            "type": "aggregate",
+            "description": "A policy that grants access to resource owners",
+            "type": "script-only-owner.js",
             "logic": "POSITIVE",
-            "decisionStrategy": "UNANIMOUS",
-            "config": {
-              "applyPolicies": "[\"Any Admin Policy\",\"Only From a Specific Client Address\"]"
-            }
+            "decisionStrategy": "UNANIMOUS"
           },
           {
             "id": "7546da6d-c0dd-4f7c-897e-1dafbbf52fb5",
             "name": "Only Owner Policy",
-            "description": "Defines that only the resource owner is allowed to do something",
-            "type": "js",
+            "description": "A policy that grants access to resource owners",
+            "type": "script-only-owner.js",
             "logic": "POSITIVE",
-            "decisionStrategy": "UNANIMOUS",
-            "config": {
-              "code": "var permission = $evaluation.getPermission();\nvar identity = $evaluation.getContext().getIdentity();\nvar resource = permission.getResource();\nif (resource) {\nif (resource.getOwner().equals(identity.getId())) {\n$evaluation.grant();\n}}"
-            }
+            "decisionStrategy": "UNANIMOUS"
           },
           {
             "id": "7f957056-cfea-4fcd-8f07-936545febcb5",

@@ -10,7 +10,7 @@
 		{
 			"name": "KEYCLOAK  request TOKEN for USER",
 			"request": {
-				"url": "http://localhost:8180/auth/realms/ineat-realm/protocol/openid-connect/token",
+				"url": "http://localhost:8080/realms/ineat-realm/protocol/openid-connect/token",
 				"method": "POST",
 				"header": [
 					{
@@ -79,7 +79,7 @@
 		{
 			"name": "KEYCLOAK  request TOKEN for ADMIN",
 			"request": {
-				"url": "http://localhost:8180/auth/realms/ineat-realm/protocol/openid-connect/token",
+				"url": "http://localhost:8080/realms/ineat-realm/protocol/openid-connect/token",
 				"method": "POST",
 				"header": [
 					{

@@ -46,7 +46,7 @@ Finally, let's enable the **Brute Force Detection** feature to the realm. This f
 
 ## Test :
 
-Let's now log in to the account console using the **alice** user. For that, open your browser at http://localhost:8080/auth/realms/myrealm/account and log in using the user's credentials.
+Let's now log in to the account console using the **alice** user. For that, open your browser at http://localhost:8080/realms/myrealm/account and log in using the user's credentials.
 
 At this moment, you should be able to authenticate to the account console by providing only a password.
 

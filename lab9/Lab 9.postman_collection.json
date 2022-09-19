@@ -81,7 +81,7 @@
 						}
 					]
 				},
-				"url": "{{KC_URL}}/auth/realms/{{Realm}}/protocol/openid-connect/token",
+				"url": "{{KC_URL}}/realms/{{Realm}}/protocol/openid-connect/token",
 				"description": "Dont forget to change client-secret with yours"
 			},
 			"response": []
@@ -194,7 +194,7 @@
 						}
 					]
 				},
-				"url": "{{KC_URL}}/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+				"url": "{{KC_URL}}/realms/spring-boot-quickstart/protocol/openid-connect/token",
 				"description": "Dont forget to set Bearer value obtains from token request"
 			},
 			"response": []

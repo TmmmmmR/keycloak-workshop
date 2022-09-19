@@ -90,7 +90,7 @@ micronaut:
         signatures:
           jwks:
             keycloak:
-              url: 'http://localhost:8080/auth/realms/workshop/protocol/openid-connect/certs'
+              url: 'http://localhost:8080/realms/workshop/protocol/openid-connect/certs'
 ```
 An error you get very often with files in yaml format is that the indents are not correct. 
 This can lead to unexpected errors later when you try to run all this stuff.
@@ -147,7 +147,7 @@ Again we use the password grant flow request to get a token for calling our new 
 httpie:
 
 ```bash
-http --form http://localhost:8080/auth/realms/workshop/protocol/openid-connect/token grant_type=password \
+http --form http://localhost:8080/realms/workshop/protocol/openid-connect/token grant_type=password \
 username=ckent password=kent client_id=library-client client_secret=9584640c-3804-4dcd-997b-93593cfb9ea7
 ``` 
 
@@ -155,7 +155,7 @@ curl:
 
 ```bash
 curl -X POST -d 'grant_type=password&username=ckent&password=kent&client_id=library-client&client_secret=9584640c-3804-4dcd-997b-93593cfb9ea7' \
-http://localhost:8080/auth/realms/workshop/protocol/openid-connect/token
+http://localhost:8080/realms/workshop/protocol/openid-connect/token
 ```
 
 This should return an access token together with a refresh token:

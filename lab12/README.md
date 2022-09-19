@@ -24,9 +24,9 @@ The first part of configuring the identity broker is to add a new Realm. This Re
 
 * Specify the SP Entity ID and the ACS URL for the JumpCloud SAML IdP that you want to connect with. These values be formatted similar to the following:
 
-SP Entity ID: `https://<my-keycloak-url>/auth/realms/<realm-name>`
+SP Entity ID: `https://<my-keycloak-url>/realms/<realm-name>`
 
-ACS URL: `https://<my-keycloak-url>/auth/realms/<realm-name>/broker/<keycloak-idp-alias>/endpoint`
+ACS URL: `https://<my-keycloak-url>/realms/<realm-name>/broker/<keycloak-idp-alias>/endpoint`
 
 * The remaining parameters can be left as is, so click Save to proceed.
 

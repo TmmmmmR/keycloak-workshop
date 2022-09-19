@@ -1,4 +1,4 @@
-X:\_TOOLS\keycloak-15.0.2\labs\spring-keycloak-authz-complete\src\main\java\org\keycloak\quickstart\springsecurity\web\ApplicationController.java
-X:\_TOOLS\keycloak-15.0.2\labs\spring-keycloak-authz-complete\src\main\java\org\keycloak\quickstart\springsecurity\web\MyApplication.java
-X:\_TOOLS\keycloak-15.0.2\labs\spring-keycloak-authz-complete\src\main\java\org\keycloak\quickstart\springsecurity\web\Identity.java
-X:\_TOOLS\keycloak-15.0.2\labs\spring-keycloak-authz-complete\src\main\java\org\keycloak\quickstart\springsecurity\web\SecurityConfig.java
+/Users/temmar/Work/Trainings/keycloak/keycloak-workshop/lab8/app-authz-spring-security-complete/src/main/java/org/keycloak/lab8/springsecurity/web/SecurityConfig.java
+/Users/temmar/Work/Trainings/keycloak/keycloak-workshop/lab8/app-authz-spring-security-complete/src/main/java/org/keycloak/lab8/springsecurity/web/MyApplication.java
+/Users/temmar/Work/Trainings/keycloak/keycloak-workshop/lab8/app-authz-spring-security-complete/src/main/java/org/keycloak/lab8/springsecurity/web/ApplicationController.java
+/Users/temmar/Work/Trainings/keycloak/keycloak-workshop/lab8/app-authz-spring-security-complete/src/main/java/org/keycloak/lab8/springsecurity/web/Identity.java

@@ -139,7 +139,7 @@ public class RptStore {
                     // TODO: Configuration of the client needs to be better!
                     Map<String, Object> clientSecret = new HashMap<>();
                     clientSecret.put("secret", "password");
-                    Configuration cfg = new Configuration("http://localhost:8180/auth", "photoz","photoz-app", clientSecret, null);
+                    Configuration cfg = new Configuration("http://localhost:8180/", "photoz","photoz-app", clientSecret, null);
                     authzClient = AuthzClient.create(cfg);
                 }
             }

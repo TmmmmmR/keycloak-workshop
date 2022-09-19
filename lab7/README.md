@@ -71,7 +71,7 @@ We can configure the realm for the Spring Boot Keycloak adapter via the normal S
 ########################################
 # Spring Boot / Keycloak Configuration
 ########################################
-keycloak.auth-server-url=http://localhost:8180/auth
+keycloak.auth-server-url=http://localhost:8080/auth
 keycloak.realm=ineat-realm
 keycloak.resource=ineat-api
 ```
@@ -82,7 +82,7 @@ We are going to use a bearer token for authentication (so no need to set-up the 
 ########################################
 # Spring Boot / Keycloak Configuration
 ########################################
-keycloak.auth-server-url=http://localhost:8180/auth
+keycloak.auth-server-url=http://localhost:8080/auth
 keycloak.realm=ineat-realm
 keycloak.resource=ineat-api
 

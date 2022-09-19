@@ -1,2 +1,2 @@
-X:\_TOOLS\keycloak-15.0.2\labs\app-authz-rest-springboot\src\main\java\org\keycloak\quickstart\springboot\MyApplication.java
-X:\_TOOLS\keycloak-15.0.2\labs\app-authz-rest-springboot\src\main\java\org\keycloak\quickstart\springboot\web\ApplicationController.java
+/Users/temmar/Work/Trainings/keycloak/keycloak-workshop/lab9/app-authz-rest-springboot-complete/src/main/java/org/keycloak/lab8/springboot/MyApplication.java
+/Users/temmar/Work/Trainings/keycloak/keycloak-workshop/lab9/app-authz-rest-springboot-complete/src/main/java/org/keycloak/lab8/springboot/web/ApplicationController.java

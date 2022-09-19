@@ -88,7 +88,7 @@ To configure and run Keycloak using docker
 
 Wait until the docker container has been started completely. When you see the line _Started 590 of 885 services_, 
 then Keycloak is configured and running.  
-Now open your web browser and navigate to [localhost:8080/auth/admin](http://localhost:8080/auth/admin) and login
+Now open your web browser and navigate to [localhost:8080/admin](http://localhost:8080/admin) and login
 using the credentials _admin_/_admin_.
 
 If you see errors importing the workshop configuration then please re-check the value of the _WORKSHOP_HOME_ environment variable (step 2 above) so that the script can find the _keycloak_realm_workshop.json_ file to import.
@@ -113,7 +113,7 @@ All you need to configure Keycloak is located in the subdirectory _setup_ of the
    __import_keycloak_realm.sh__ or __import_keycloak_realm.bat__ (depending on your OS). 
    This starts a standalone Keycloak instance and automatically imports the required configuration.
 4. Wait until the import has finished (look for a line like _Started 590 of 885 services_) then 
-   direct your web browser to [localhost:8080/auth](http://localhost:8080/auth/)
+   direct your web browser to [localhost:8080/auth](http://localhost:8080/)
 5. Here you have to create the initial admin user to get started. Please use the value _admin_ both as username and as password, 
 then click the button _Create_. Please note: In production you must use a much more secure password for the admin user!
 6. Now you can continue to the _Administration Console_ by clicking on the corresponding link displayed and login using the new credentials
@@ -156,7 +156,7 @@ instead of default one (8080) as well.
 Independent of the setup type (docker or local install), to access the web admin UI of Keycloak 
 you need to perform these steps:
 
-1. Now direct your browser to [localhost:8080/auth/admin](http://localhost:8080/auth/admin/)
+1. Now direct your browser to [localhost:8080/admin](http://localhost:8080/admin/)
 2. Login into the admin console using __admin/admin__ as credentials
 
 Now, if you see the realm _workshop_ on the left then Keycloak is ready to use it for this workshop.

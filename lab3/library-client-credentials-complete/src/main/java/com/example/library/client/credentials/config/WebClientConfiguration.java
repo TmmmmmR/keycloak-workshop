@@ -21,7 +21,7 @@ public class WebClientConfiguration {
   @Bean
   ReactiveClientRegistrationRepository clientRegistrations() {
     ClientRegistration clientRegistration = ClientRegistrations
-            .fromOidcIssuerLocation("http://localhost:8080/auth/realms/workshop")
+            .fromOidcIssuerLocation("http://localhost:8080/realms/workshop")
             .registrationId("library_client")
             .clientId("library-client")
             .clientSecret("9584640c-3804-4dcd-997b-93593cfb9ea7")

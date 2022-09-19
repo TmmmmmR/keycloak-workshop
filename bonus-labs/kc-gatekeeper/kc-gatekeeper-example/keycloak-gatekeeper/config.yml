@@ -1,5 +1,5 @@
 # Keycloak URL
-discovery-url: http://host.docker.internal:8888/auth/realms/WordPress
+discovery-url: http://host.docker.internal:8888/realms/WordPress
 
 # Client credentials
 client-id: gatekeeper-api

@@ -28,7 +28,7 @@ The required parameters for the client credentials grant are shown here:
 
 | Parameter     | Value                                                                     | 
 | --------------| ------------------------------------------------------------------------- | 
-| token url     | http://localhost:8080/auth/realms/workshop/protocol/openid-connect/token  | 
+| token url     | http://localhost:8080/realms/workshop/protocol/openid-connect/token  | 
 | grant_type    | client_credentials                                                        | 
 | client_id     | library-client                                                            | 
 | client_secret | 9584640c-3804-4dcd-997b-93593cfb9ea7                                      | 
@@ -39,7 +39,7 @@ The required parameters for the client credentials grant are shown here:
 To retrieve an access token using _curl_ use the following command in a terminal:
 
 ```curl
-curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=client_credentials&client_id=library-client&client_secret=9584640c-3804-4dcd-997b-93593cfb9ea7" http://localhost:8080/auth/realms/workshop/protocol/openid-connect/token
+curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=client_credentials&client_id=library-client&client_secret=9584640c-3804-4dcd-997b-93593cfb9ea7" http://localhost:8080/realms/workshop/protocol/openid-connect/token
 ```
 
 This should return a response similar to this one:
@@ -62,7 +62,7 @@ This should return a response similar to this one:
 To retrieve an access token using _httpie_ use the following command in a terminal:
 
 ```httpie
-http --form POST localhost:8080/auth/realms/workshop/protocol/openid-connect/token grant_type='client_credentials' client_id='library-client' client_secret='9584640c-3804-4dcd-997b-93593cfb9ea7'
+http --form POST localhost:8080/realms/workshop/protocol/openid-connect/token grant_type='client_credentials' client_id='library-client' client_secret='9584640c-3804-4dcd-997b-93593cfb9ea7'
 ```
 
 This should return a response similar to the one for curl.
@@ -95,7 +95,7 @@ The required parameters for the RO password credentials grant are shown here:
 
 | Parameter     | Value                                                                     | 
 | --------------| ------------------------------------------------------------------------- | 
-| token url     | http://localhost:8080/auth/realms/workshop/protocol/openid-connect/token  | 
+| token url     | http://localhost:8080/realms/workshop/protocol/openid-connect/token  | 
 | grant_type    | password                                                                  | 
 | client_id     | library-client                                                            | 
 | client_secret | 9584640c-3804-4dcd-997b-93593cfb9ea7                                      | 
@@ -108,7 +108,7 @@ The required parameters for the RO password credentials grant are shown here:
 To retrieve an access token using curl use the following command in a terminal:
 
 ```curl
-curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=password&username=bwayne&password=wayne&client_id=library-client&client_secret=9584640c-3804-4dcd-997b-93593cfb9ea7" http://localhost:8080/auth/realms/workshop/protocol/openid-connect/token
+curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=password&username=bwayne&password=wayne&client_id=library-client&client_secret=9584640c-3804-4dcd-997b-93593cfb9ea7" http://localhost:8080/realms/workshop/protocol/openid-connect/token
 ```
 
 This should return a response similar to this one:
@@ -131,7 +131,7 @@ This should return a response similar to this one:
 To retrieve an access token using _httpie_ use the following command in a terminal:
 
 ```httpie
-http --form POST localhost:8080/auth/realms/workshop/protocol/openid-connect/token grant_type='password' username='bwayne' password='wayne' client_id='library-client' client_secret='9584640c-3804-4dcd-997b-93593cfb9ea7'
+http --form POST localhost:8080/realms/workshop/protocol/openid-connect/token grant_type='password' username='bwayne' password='wayne' client_id='library-client' client_secret='9584640c-3804-4dcd-997b-93593cfb9ea7'
 ```
 
 This should return a response similar to the one for curl.
@@ -200,7 +200,7 @@ Then you should see the response in Postman:
 To achieve the same using _curl_ first copy this request into the page url of your web browser:
 
 ```uri
-http://localhost:8080/auth/realms/workshop/protocol/openid-connect/auth?response_type=code&client_id=demo-client&redirect_uri=http://localhost:9095/client/callback
+http://localhost:8080/realms/workshop/protocol/openid-connect/auth?response_type=code&client_id=demo-client&redirect_uri=http://localhost:9095/client/callback
 ``` 
 
 Now log in using _bwayne_/_wayne_ then you should get an error message in the browser (because the callback address of the redirect is not found).
@@ -217,7 +217,7 @@ Just copy the _code_ parameter:
 and use this in the _curl_ request to get an access token:
 
 ```curl
-curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=authorization_code&code=[fill with your code]&redirect_uri=http://localhost:9095/client/callback&client_id=demo-client&client_secret=b3ec9d3f-d1ee-4a18-b4ba-05d832c15293" http://localhost:8080/auth/realms/workshop/protocol/openid-connect/token
+curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=authorization_code&code=[fill with your code]&redirect_uri=http://localhost:9095/client/callback&client_id=demo-client&client_secret=b3ec9d3f-d1ee-4a18-b4ba-05d832c15293" http://localhost:8080/realms/workshop/protocol/openid-connect/token
 ```
 
 As response, you should get an access token.

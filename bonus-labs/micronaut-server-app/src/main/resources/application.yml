@@ -12,7 +12,7 @@ micronaut:
         signatures:
           jwks:
             keycloak:
-              url: 'http://localhost:8080/auth/realms/workshop/protocol/openid-connect/certs'
+              url: 'http://localhost:8080/realms/workshop/protocol/openid-connect/certs'
 
 endpoints:
   health:

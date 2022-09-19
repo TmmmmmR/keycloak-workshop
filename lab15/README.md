@@ -5,7 +5,7 @@ Keycloak Authentication Provider implementation to get a 2nd-factor authenticati
 
 ### Step 1 : Install the custom Authentication Provider
 
-First, build the code from this lab and copy the jar package to Keycloak deployement folder `{KEYCLOAK_HOME}/standalone/deployments`. 
+First, build the code from this lab and copy the jar package to Keycloak deployement folder `{KEYCLOAK_HOME}/providers`. 
 
 ### Step 2 : configure the authentication flow
 

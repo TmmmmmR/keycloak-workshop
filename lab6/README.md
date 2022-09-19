@@ -110,7 +110,7 @@ Now open the created file `services/auth.service.ts` and initialize the configur
 AuthConfig = {
 
     // Url of the Identity Provider
-    issuer: 'http://localhost:8080/auth/realms/workshop',
+    issuer: 'http://localhost:8080/realms/workshop',
   
     // URL of the SPA to redirect the user to after login
     redirectUri: window.location.origin + '/index.html',

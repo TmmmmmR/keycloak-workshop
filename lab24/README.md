@@ -61,7 +61,7 @@ After performing these steps, log in to the administration console as the admini
 
 ![Defining the mytheme theme as the login theme for the account console](./images/theme_conf.jpg)
 
-Now, log out from the administration console and try to log in to the account console by opening http://localhost:8080/auth/realms/myrealm/account. If everything is properly configured, the login page should have a different layout, as follows:
+Now, log out from the administration console and try to log in to the account console by opening http://localhost:8080/realms/myrealm/account. If everything is properly configured, the login page should have a different layout, as follows:
 
 ![Login page](./images/login_page.jpg)
 

@@ -31,18 +31,26 @@ Configuration in Keycloak
 
 Prior to running this lab you need to create a `realm` in Keycloak with all the necessary configuration to deploy and run the lab.
 
-Make sure your Keycloak server is running on <http://localhost:8180/>. For that, you can start the server using the command below:
 
-   ````
-   cd {KEYCLOAK_HOME}/bin
-   ./standalone.sh -Djboss.socket.binding.port-offset=100
-   
-   ````
 
 You should also deploy some JS policies into the Keycloak Server. For that, perform the following steps:
 
    ````
-   mvn -f ./js-authz-policies clean install && cp ../js-authz-policies/target/js-authz-policies.jar {KEYCLOAK_HOME}/standalone/deployments
+   mvn -f ./js-authz-policies clean install && cp ../js-authz-policies/target/js-authz-policies.jar {KEYCLOAK_HOME}/providers
+   ````
+
+And then install the policy using using the following the command :
+   ````
+   cd {KEYCLOAK_HOME}/bin
+   ./kc.sh build
+   ````
+
+Make sure your Keycloak server is running on <http://localhost:8080/>. For that, you can start the server using the command below:
+
+   ````
+   cd {KEYCLOAK_HOME}/bin
+   ./kc.sh start-dev
+   
    ````
 
 The following steps show how to create the realm required for this lab:
@@ -76,7 +84,7 @@ on behalf of user `jdoe`, just make sure to change both `username` and `password
 
 ```bash
  export access_token=$(\
-    curl -X POST http://localhost:8180/auth/realms/lab9/protocol/openid-connect/token \
+    curl -X POST http://localhost:8080/realms/lab9/protocol/openid-connect/token \
     -H 'Authorization: Basic YXBwLWF1dGh6LXJlc3Qtc3ByaW5nYm9vdDpzZWNyZXQ=' \
     -H 'content-type: application/x-www-form-urlencoded' \
     -d 'username=alice&password=alice&grant_type=password' | jq --raw-output '.access_token' \
@@ -109,7 +117,7 @@ To obtain an RPT, you must first exchange an OAuth2 Access Token for a RPT by in
 
 ```bash
 export rpt=$(curl -X POST \
- http://localhost:8180/auth/realms/lab9/protocol/openid-connect/token \
+ http://localhost:8080/realms/lab9/protocol/openid-connect/token \
  -H "Authorization: Bearer "$access_token \
  --data "grant_type=urn:ietf:params:oauth:grant-type:uma-ticket" \
  --data "audience=app-authz-rest-springboot" \
@@ -124,7 +132,7 @@ As an alternative, you can also obtain permissions for any resource protected by
 
 ```bash
 export rpt=$(curl -X POST \
- http://localhost:8180/auth/realms/lab9/protocol/openid-connect/token \
+ http://localhost:8080/realms/lab9/protocol/openid-connect/token \
  -H "Authorization: Bearer "$access_token \
  --data "grant_type=urn:ietf:params:oauth:grant-type:uma-ticket" \
  --data "audience=app-authz-rest-springboot" | jq --raw-output '.access_token' \
