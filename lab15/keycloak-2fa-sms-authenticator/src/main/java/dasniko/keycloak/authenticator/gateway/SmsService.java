@@ -1,4 +1,4 @@
-package example.keycloak.authenticator.gateway;
+package dasniko.keycloak.authenticator.gateway;
 
 import java.util.Map;
 

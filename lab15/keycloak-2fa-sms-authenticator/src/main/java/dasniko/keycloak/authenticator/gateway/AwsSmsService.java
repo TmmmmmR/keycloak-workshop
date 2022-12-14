@@ -1,4 +1,4 @@
-package example.keycloak.authenticator.gateway;
+package dasniko.keycloak.authenticator.gateway;
 
 import software.amazon.awssdk.services.sns.SnsClient;
 import software.amazon.awssdk.services.sns.model.MessageAttributeValue;

@@ -4,35 +4,43 @@
 				 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>keycloak</groupId>
-	<artifactId>2fa-sms-authenticator</artifactId>
+	<groupId>dasniko</groupId>
+	<artifactId>keycloak-2fa-sms-authenticator</artifactId>
 	<version>1.0-SNAPSHOT</version>
 
 	<properties>
-		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>${java.version}</maven.compiler.source>
-		<maven.compiler.target>${java.version}</maven.compiler.target>
-		<aws.version>2.15.1</aws.version>
-		<keycloak.version>13.0.1</keycloak.version>
-		<maven-shade.version>3.2.4</maven-shade.version>
+		<aws.version>2.18.6</aws.version>
+		<keycloak.version>20.0.0</keycloak.version>
+		<maven.compiler.release>11</maven.compiler.release>
+		<maven.compiler.version>3.10.1</maven.compiler.version>
+		<maven.shade.version>3.2.4</maven.shade.version>
 	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.github.dasniko</groupId>
+				<artifactId>keycloak-spi-bom</artifactId>
+				<version>${keycloak.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.keycloak</groupId>
-			<artifactId>keycloak-server-spi-private</artifactId>
-			<scope>provided</scope>
+			<artifactId>keycloak-server-spi</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.keycloak</groupId>
-			<artifactId>keycloak-server-spi</artifactId>
-			<scope>provided</scope>
+			<artifactId>keycloak-server-spi-private</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.keycloak</groupId>
 			<artifactId>keycloak-services</artifactId>
-			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>software.amazon.awssdk</groupId>
@@ -47,25 +55,18 @@
 		</dependency>
 	</dependencies>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.keycloak</groupId>
-				<artifactId>keycloak-parent</artifactId>
-				<version>${keycloak.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
 	<build>
-		<finalName>${project.groupId}-${project.artifactId}-${project.version}</finalName>
+		<finalName>${project.groupId}.${project.artifactId}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
-				<version>${maven-shade.version}</version>
+				<version>${maven.shade.version}</version>
 				<executions>
 					<execution>
 						<phase>package</phase>
@@ -74,12 +75,10 @@
 						</goals>
 						<configuration>
 							<artifactSet>
-								<excludes>
-									<exclude>com.fasterxml.jackson.core</exclude>
-									<exclude>org.apache.httpcomponents</exclude>
-									<exclude>commons-logging</exclude>
-									<exclude>commons-codec</exclude>
-								</excludes>
+								<includes>
+									<include>software.amazon.awssdk:*</include>
+									<include>org.reactivestreams:reactive-streams</include>
+								</includes>
 							</artifactSet>
 						</configuration>
 					</execution>

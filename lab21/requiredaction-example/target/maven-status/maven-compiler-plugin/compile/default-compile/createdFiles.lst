@@ -1,2 +1,2 @@
-example\keycloak\requiredaction\MobileNumberRequiredAction.class
-example\keycloak\requiredaction\MobileNumberRequiredActionFactory.class
+example/keycloak/requiredaction/MobileNumberRequiredAction.class
+example/keycloak/requiredaction/MobileNumberRequiredActionFactory.class

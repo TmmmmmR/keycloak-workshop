@@ -20,7 +20,7 @@ To utilize the on-the-fly runtime configuration of providers in Keycloak, we nee
 
 ### Steps to deploy the user storage provider
 1. Execute `./gradlew jar` and wait till it's finished processing
-2. Copy the `keycloak-user-store-1.0.0-SNAPSHOT.jar` from your `./build/libs/`-folder to `<pathToKeycloak>/standalone/deployments/`
+2. Copy the `keycloak-user-store-1.0.0-SNAPSHOT.jar` from your `./build/libs/`-folder to `<pathToKeycloak>/providers/` and then rebuild you keycloak instance using `build` switch
 3. WildFly (= application server of keycloak) should now automatically deploy the JAR-file and make it available in Keycloak (Providing that keycloak is running)
 
 ### Configure the user storage provider for your realm in keycloak
